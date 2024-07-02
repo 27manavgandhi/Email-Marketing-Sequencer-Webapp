@@ -5,7 +5,7 @@ const env = process.env.NODE_ENV; // development , production
 
 let configEnv = null;
 
-if (env === 'production') {
+if (env === 'development') {
     configEnv = {
         db: process.env.MONGODB_URL,
         port: process.env.PORT
