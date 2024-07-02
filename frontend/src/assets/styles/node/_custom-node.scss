@@ -1,0 +1,52 @@
+.custom-node {
+    border: 1px solid #D7D7D7;
+    border-radius: 6px;
+    background-color: white;
+    padding: 10px;
+    font-weight: bold;
+
+    .icon-wrapper {
+        border-radius: 6px;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &.send-mail-node {
+
+
+        .icon-wrapper {
+            background-color: #E3CCF8;
+            border: 1px solid #8929E0;
+
+
+            i {
+                color: #8929E0;
+            }
+        }
+    }
+
+    &.wait-node {
+        .icon-wrapper {
+            background-color: #EAF1F7;
+            border: 1px solid #03A6FF;
+
+            i {
+                color: #03A6FF;
+            }
+        }
+    }
+
+    &.decision-node {
+        .icon-wrapper {
+            background-color: #dcfce7;
+            border: 1px solid #15803d;
+
+            i {
+                color: #15803d;
+            }
+        }
+    }
+}

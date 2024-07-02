@@ -1,0 +1,68 @@
+@import "./theme-variables";
+
+body {
+    background-color: $body-bg-color;
+    font-size: $fonts-size-text;
+}
+
+
+.inner-wrap {
+    padding-top: $inner-wrap-spacing-top;
+    padding-bottom: $inner-wrap-spacing-bottom;
+}
+
+.content-wrap {
+    margin-top: $content-wrap-spacing-top;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+h1 {
+    font-size: $h1-size;
+    line-height: $h1-height;
+    font-weight: $h1-font-weight;
+}
+
+h2 {
+    font-size: $h2-size;
+    line-height: $h2-height;
+    font-weight: $h2-font-weight;
+
+}
+
+h3 {
+    font-size: $h3-size;
+    line-height: $h3-height;
+    font-weight: $h3-font-weight;
+
+}
+
+h4 {
+    font-size: $h4-size;
+    line-height: $h4-height;
+    font-weight: $h4-font-weight;
+
+}
+
+h5 {
+    font-size: $h3-size;
+    line-height: $h3-height;
+    font-weight: $h3-font-weight;
+
+}
+
+h6 {
+    font-size: $h4-size;
+    line-height: $h4-height;
+    font-weight: $h4-font-weight;
+
+}

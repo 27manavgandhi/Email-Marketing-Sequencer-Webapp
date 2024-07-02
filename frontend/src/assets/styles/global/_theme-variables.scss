@@ -1,0 +1,82 @@
+// Background color for <body>
+$body-bg-color: #FFFFFF;
+
+
+//global fonts
+// $fonts-family-base: var(--font-dm-sans);
+$fonts-weight-base: 400;
+$fonts-size-text: 18px;
+$line-heights-base: 30px;
+
+//mobile
+$fonts-size-text-sm: 17px;
+
+// title size desktop
+$h1-size: 44px;
+$h2-size: 40px;
+$h3-size: 32px;
+$h4-size: 24px;
+$h5-size: 22px;
+$h6-size: 20px;
+
+// title line height desktop
+$h1-height: 82px;
+$h2-height: 50px;
+$h3-height: 40px;
+$h4-height: 30px;
+$h5-height: 38px;
+$h6-height: 36px;
+
+//spacing desktop
+$spacing-s: 10px;
+$spacing-m: 20px;
+$spacing-l: 30px;
+$spacing-xl: 50px;
+$spacing-xxl: 60px;
+$spacing-xxxl: 120px;
+
+
+// title size small screen (mobile)
+$h1-size-sm: 36px;
+$h2-size-sm: 28px;
+$h3-size-sm: 26px;
+$h4-size-sm: 22px;
+$h5-size-sm: 20px;
+$h6-size-sm: 20px;
+
+// title height small screen (mobile)
+$h1-height-sm: 70px;
+$h2-height-sm: 42px;
+$h3-height-sm: 36px;
+$h4-height-sm: 42px;
+$h5-height-sm: 36px;
+$h6-height-sm: 36px;
+
+//spacing small screen (mobile)
+$spacing-s-sm: 10px;
+$spacing-m-sm: 20px;
+$spacing-l-sm: 30px;
+$spacing-xl-sm: 50px;
+$spacing-xxl-sm: 60px;
+$spacing-xxxl-sm: 80px;
+
+
+// title font-weight
+$h1-font-weight: 900;
+$h2-font-weight: 700;
+$h3-font-weight: 600;
+$h4-font-weight: 600;
+$h5-font-weight: 500;
+$h6-font-weight: 500;
+
+
+// Content structure - desktop
+$inner-wrap-spacing-top: $spacing-xxl;
+$inner-wrap-spacing-bottom: $spacing-xxl;
+$content-wrap-spacing-top: $spacing-l;
+$content-wrap-spacing-bottom: $spacing-l;
+$description-wrap-spacing-top: $spacing-l;
+
+// Content structure - mobile
+$inner-wrap-spacing-top-sm: $spacing-xxl-sm;
+$inner-wrap-spacing-bottom-sm: $spacing-xxl-sm;
