@@ -21,6 +21,12 @@ app.get('/api/health', (req, res) => {
     res.json({ status: 'ok', message: 'Server is running', dbStatus: app.locals.dbConnected ? 'connected' : 'disconnected' });
 });
 
+// Debug route
+app.use('*', (req, res, next) => {
+    console.log('Accessed path:', req.method, req.path);
+    next();
+});
+
 // Connect to MongoDB
 app.locals.dbConnected = false;
 mongoDBCon()
@@ -30,23 +36,19 @@ mongoDBCon()
     })
     .catch(err => {
         console.error('MongoDB connection error:', err);
-        // We're not exiting the process here, allowing the app to run even if DB connection fails
     });
 
 console.log('MongoDB connection attempt initiated');
 
 // Routes
-try {
-    app.use('/api/auth', authRoutes);
-    app.use('/api/emailsequence', emailSequenceRoutes);
-    console.log('Routes set up');
-} catch (error) {
-    console.error('Error setting up routes:', error);
-}
+console.log('Setting up routes...');
+app.use('/api/auth', authRoutes);
+app.use('/api/emailsequence', emailSequenceRoutes);
+console.log('Routes set up');
 
 // 404 handler
 app.use((req, res) => {
-    console.log('404 Not Found:', req.path);
+    console.log('404 Not Found:', req.method, req.path);
     res.status(404).json({ error: 'Not Found' });
 });
 
@@ -55,14 +57,6 @@ app.use((err, req, res, next) => {
     console.error('Unhandled error:', err);
     res.status(500).json({ error: 'Internal Server Error', message: err.message });
 });
-
-// If this file is run directly (not imported), start the server
-if (import.meta.url === `file://${process.argv[1]}`) {
-    const PORT = process.env.PORT || 3000;
-    app.listen(PORT, () => {
-        console.log(`Server running on port ${PORT}`);
-    });
-}
 
 console.log('Server initialization complete');
 
