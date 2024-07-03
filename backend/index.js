@@ -3,10 +3,7 @@ import { mongoDBCon } from './src/config/mongoDBCon.js';
 import authRoutes from './src/api/routes/auth/auth.routes.js';
 import emailSequenceRoutes from './src/api/routes/emailsequence/emailsequence.routes.js';
 import cors from 'cors';
-import path, { dirname } from 'path';
-import { fileURLToPath } from 'url'
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
 
 console.log('Starting server initialization...');
@@ -44,16 +41,6 @@ app.get('/api/health', (req, res) => {
     console.log('Health check route accessed');
     res.json({ status: 'ok', dbConnected });
 });
-
-// Static file serving for production
-if (process.env.NODE_ENV === 'production') {
-    const frontendPath = path.join(__dirname, '../frontend/dist');
-    app.use(express.static(frontendPath));
-    app.get("*", (req, res) => {
-        res.sendFile(path.join(frontendPath, "index.html"));
-    });
-    console.log('Static file serving set up for production');
-}
 
 // 404 handler
 app.use((req, res) => {
