@@ -1,5 +1,8 @@
 {
   "type": "module",
+   "dependencies": {
+    "express": "^4.17.1"
+  },
   "scripts": {
     "start": "cd ../frontend && npm install  && npm run build && cd ../backend && npm install &&  node index.js",
     "dev": "nodemon index.js"
